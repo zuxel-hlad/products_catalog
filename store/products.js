@@ -27,9 +27,9 @@ export const getters = {
     sortedProducts(state) {
         switch (state.sort) {
             case 'cheap':
-                return [...state.products].sort((a, b) => (a.price < b.price ? -1 : 1));
-            case 'expensive':
                 return [...state.products].sort((a, b) => (a.price > b.price ? -1 : 1));
+            case 'expensive':
+                return [...state.products].sort((a, b) => (a.price < b.price ? -1 : 1));
             default:
                 return [...state.products].sort((a, b) => (a.rating.rate < b.rating.rate ? 1 : -1));
         }
