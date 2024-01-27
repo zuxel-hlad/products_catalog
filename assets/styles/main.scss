@@ -1,0 +1,54 @@
+@import './_reset';
+@import './_variables';
+
+html,
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+body {
+    background: #f5f6f8;
+    color: $black;
+}
+
+.app-wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    main {
+        flex-grow: 1;
+    }
+}
+
+.section {
+    padding: 30px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1464px;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
+
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.2s ease;
+}
+.list-enter-from,
+.list-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+}
